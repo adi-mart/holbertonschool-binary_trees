@@ -8,25 +8,24 @@
  */
 binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 {
-	int key = node->n;
-
 	if (node == NULL)
 		return (NULL);
+
 	if (node->parent == NULL)
 		return (NULL);
 
-	if (node->parent->left != NULL && node->parent->left->n == key)
+	if (node->parent->left == node)
 	{
-	if (node->parent->right != NULL)
-		return (node->parent->right);
-	return (NULL);
+		if (node->parent->right != NULL)
+			return (node->parent->right);
+		return (NULL);
 	}
 
-	if (node->parent->right != NULL && node->parent->right->n == key)
+	if (node->parent->right == node)
 	{
-	if (node->parent->left != NULL)
-		return (node->parent->left);
-	return (NULL);
+		if (node->parent->left != NULL)
+			return (node->parent->left);
+		return (NULL);
 	}
 	return (NULL);
 }
