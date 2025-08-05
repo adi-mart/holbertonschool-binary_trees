@@ -1,9 +1,39 @@
 
-# Binary Trees
+
+# Les Arbres Binaires
 
 Ce projet a pour objectif d'implémenter différentes fonctions de manipulation d'arbres binaires en C.
 
-Un **arbre binaire** est une structure de données arborescente dans laquelle chaque nœud possède au plus deux enfants, appelés généralement « fils gauche » et « fils droit ». Cette structure est largement utilisée en informatique pour organiser, rechercher et manipuler des données de façon efficace (par exemple, dans les arbres de recherche, les tas, etc.).
+
+## Définition d'un arbre binaire
+
+Un **arbre binaire** est une structure de données hiérarchique composée de nœuds. Chaque nœud contient une valeur (ou donnée), un pointeur vers son parent (sauf la racine qui n'a pas de parent), et peut avoir jusqu'à deux enfants distincts :
+- un enfant gauche (left child)
+- un enfant droit (right child)
+
+Chaque nœud (sauf la racine) possède donc un **parent** qui est le nœud situé juste au-dessus de lui dans la hiérarchie. Cette relation parent/enfant permet de remonter ou de descendre dans l'arbre facilement.
+
+Le premier nœud de l'arbre est appelé la **racine**. Un nœud sans enfant est appelé une **feuille**. Les arbres binaires sont utilisés pour représenter des relations hiérarchiques, organiser des données pour une recherche rapide (arbres de recherche binaires), implémenter des files de priorité (tas binaires), etc.
+
+
+### Parcours d'un arbre binaire
+
+Il existe plusieurs façons de parcourir un arbre binaire, c'est-à-dire de visiter tous ses nœuds dans un certain ordre. Les trois parcours principaux sont :
+
+- **Parcours en préordre (preorder)** :
+  1. Visiter le nœud courant
+  2. Parcourir le sous-arbre gauche
+  3. Parcourir le sous-arbre droit
+
+- **Parcours en inordre (inorder)** :
+  1. Parcourir le sous-arbre gauche
+  2. Visiter le nœud courant
+  3. Parcourir le sous-arbre droit
+
+- **Parcours en postordre (postorder)** :
+  1. Parcourir le sous-arbre gauche
+  2. Parcourir le sous-arbre droit
+  3. Visiter le nœud courant
 
 
 ## Structure du projet
@@ -69,7 +99,6 @@ binary_tree_insert_right(root, 402);
 binary_tree_print(root);
 ```
 
-## Auteur
+## Auteurs
 Jordann et Aurélie
-
 Projet réalisé dans le cadre du cursus Holberton School.
