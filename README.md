@@ -114,6 +114,7 @@ Ce projet fait partie du programme de Holberton School, une école d'ingénierie
 ## 📄 Licence
 Ce projet fait partie du programme de Holberton School. Tous droits réservés.
 <br><br>
+---
 ## 🇬🇧 ENGLISH VERSION
 
 # 🌳 Binary Trees - Holberton School Project
