@@ -1,90 +1,89 @@
+## 🇫🇷 VERSION FRANÇAISE  
 
 # 🌳 Arbres Binaires - Projet Holberton School
 
-[![C](https://img.shields.io/badge/language-C-blue.svg)](https://en.wikipedia.org/wiki/C_(programming_language))
+[![C](https://img.shields.io/badge/language-C-blue.svg)](https://fr.wikipedia.org/wiki/C_(langage))
 [![Holberton](https://img.shields.io/badge/school-Holberton-red.svg)](https://www.holbertonschool.com/)
 
 ## 👥 Auteurs
-- **Jordann** - [GitHub Profile](https://github.com/JordannM83)
-- **Aurélie** - [GitHub Profile](https://github.com/adi-mart)
+- **Jordann** - [Profil GitHub](https://github.com/JordannM83)
+- **Aurélie** - [Profil GitHub](https://github.com/adi-mart)
 
 
 ## 📖 Description
-Ce projet fait partie du cursus Holberton School et porte sur l'implémentation de différentes fonctions de manipulation d'arbres binaires en C. L'objectif est de comprendre la structure des arbres binaires, leurs parcours, et les opérations courantes associées.
+Ce projet fait partie du programme de Holberton School et se concentre sur l'implémentation de diverses fonctions d'arbres binaires en C. L'objectif est de comprendre la structure des arbres binaires, leurs parcours et les opérations courantes.
 
 
-## 🎯 Objectifs pédagogiques
-Après avoir complété ce projet, vous serez capable de :
+## 🎯 Objectifs d'apprentissage
+Après avoir terminé ce projet, vous devriez être capable de :
 - Créer et manipuler des arbres binaires
-- Comprendre la notion de parent, enfant, racine et feuille
-- Implémenter différents parcours d'arbres binaires (préordre, inordre, postordre)
+- Comprendre les concepts de parent, enfant, racine et feuille
+- Implémenter différents parcours d'arbres binaires (préordre, infixe, postordre)
 - Calculer la hauteur, la profondeur, la taille, le nombre de feuilles et de nœuds
-- Évaluer la structure d'un arbre (équilibre, perfection, etc.)
-- Utiliser les arbres binaires pour organiser et rechercher des données
-
+- Évaluer les propriétés d'un arbre (équilibre, perfection, etc.)
+- Utiliser les arbres binaires pour organiser et rechercher des données efficacement
 
 ## 🗂️ Structure du projet
 
 ```
 holbertonschool-binary_trees/
-├── binary_trees.h                # Header avec les prototypes et structures
-├── binary_tree_print.c           # Affichage graphique de l'arbre
-├── 0-binary_tree_node.c          # Création d'un nœud
-├── 1-binary_tree_insert_left.c   # Insertion à gauche
-├── 2-binary_tree_insert_right.c  # Insertion à droite
-├── 3-binary_tree_delete.c        # Suppression d'un arbre
-├── 4-binary_tree_is_leaf.c       # Vérifie si un nœud est une feuille
-├── 5-binary_tree_is_root.c       # Vérifie si un nœud est la racine
+├── binary_trees.h                # Fichier d'en-tête avec prototypes et structures
+├── binary_tree_print.c           # Fonction d'affichage graphique de l'arbre
+├── 0-binary_tree_node.c          # Création de nœud
+├── 1-binary_tree_insert_left.c   # Insérer enfant gauche
+├── 2-binary_tree_insert_right.c  # Insérer enfant droit
+├── 3-binary_tree_delete.c        # Supprimer l'arbre
+├── 4-binary_tree_is_leaf.c       # Vérifier si le nœud est une feuille
+├── 5-binary_tree_is_root.c       # Vérifier si le nœud est racine
 ├── 6-binary_tree_preorder.c      # Parcours préordre
-├── 7-binary_tree_inorder.c       # Parcours inordre
+├── 7-binary_tree_inorder.c       # Parcours infixe
 ├── 8-binary_tree_postorder.c     # Parcours postordre
 ├── 9-binary_tree_height.c        # Hauteur de l'arbre
-├── 10-binary_tree_depth.c        # Profondeur d'un nœud
+├── 10-binary_tree_depth.c        # Profondeur du nœud
 ├── 11-binary_tree_size.c         # Taille de l'arbre
 ├── 12-binary_tree_leaves.c       # Nombre de feuilles
 ├── 13-binary_tree_nodes.c        # Nombre de nœuds non-feuilles
 ├── 14-binary_tree_balance.c      # Facteur d'équilibre
-├── 15-binary_tree_is_full.c      # Vérifie si l'arbre est plein
-├── 16-binary_tree_is_perfect.c   # Vérifie si l'arbre est parfait
-├── 17-binary_tree_sibling.c      # Trouve le frère d'un nœud
-├── 18-binary_tree_uncle.c        # Trouve l'oncle d'un nœud
+├── 15-binary_tree_is_full.c      # Vérifier si l'arbre est complet
+├── 16-binary_tree_is_perfect.c   # Vérifier si l'arbre est parfait
+├── 17-binary_tree_sibling.c      # Trouver le frère
+├── 18-binary_tree_uncle.c        # Trouver l'oncle
 ├── *-main.c                      # Fichiers de test
 └── README.md                     # Ce fichier
 ```
 
-## 🌱 Définition d'un arbre binaire
+## 🌱 Qu'est-ce qu'un arbre binaire ?
 Un **arbre binaire** est une structure de données hiérarchique composée de nœuds. Chaque nœud contient :
-  - une valeur (donnée)
-  - un pointeur vers son parent (sauf la racine)
-  - un enfant gauche
-  - un enfant droit
+- une valeur (donnée)
+- un pointeur vers son parent (sauf la racine)
+- un enfant gauche
+- un enfant droit
 
-Le premier nœud est la **racine**. 
-Un nœud sans enfant est une **feuille**. 
-Chaque nœud (sauf la racine) possède un **parent** qui est le nœud situé juste au-dessus de lui dans la hiérarchie. Cette relation parent/enfant permet de remonter ou de descendre dans l'arbre facilement. 
-Les arbres binaires sont donc utilisés pour organiser, rechercher et manipuler des données efficacement.
+Le premier nœud est la **racine**.
+Un nœud sans enfants est une **feuille**.
+Chaque nœud (sauf la racine) a un **parent** qui est le nœud directement au-dessus dans la hiérarchie. Cette relation parent/enfant permet de se déplacer facilement vers le haut ou le bas de l'arbre. Les arbres binaires sont utilisés pour organiser, rechercher et manipuler des données efficacement.
 
 
-## 🔄 Parcours d'un arbre binaire
+## 🔄 Parcours d'arbres
 Il existe plusieurs façons de parcourir un arbre binaire :
 
-- **Preorder** :
-  1. Visiter le nœud courant
+- **Préordre** :
+  1. Visiter le nœud actuel
   2. Parcourir le sous-arbre gauche
   3. Parcourir le sous-arbre droit
 
-- **Inorder** :
+- **Infixe** :
   1. Parcourir le sous-arbre gauche
-  2. Visiter le nœud courant
+  2. Visiter le nœud actuel
   3. Parcourir le sous-arbre droit
 
-- **Postorder** :
+- **Postordre** :
   1. Parcourir le sous-arbre gauche
   2. Parcourir le sous-arbre droit
-  3. Visiter le nœud courant
+  3. Visiter le nœud actuel
 
 
-## 🚀 Compilation & Utilisation
+## 🚀 Compilation et utilisation
 Compilation générale :
 ```bash
 gcc -Wall -Wextra -Werror -pedantic -std=gnu89 *.c -o binary_trees
@@ -96,73 +95,26 @@ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 1-main.c 1-binary_tree_insert_lef
 ./insert_left
 ```
 
-Inclure le header dans vos fichiers :
+Inclure l'en-tête dans vos fichiers :
 ```c
 #include "binary_trees.h"
 ```
 
 ## 🧪 Tests
-Des fichiers `*-main.c` sont fournis pour tester chaque fonctionnalité.
+Des fichiers de test `*-main.c` sont fournis pour chaque fonctionnalité.
 
 ## 📝 Notes
 - Tous les fichiers suivent le style Betty
-- Les fonctions de parcours affichent les valeurs selon l'ordre choisi
+- Les fonctions de parcours affichent les valeurs dans l'ordre choisi
 - Les fonctions de manipulation respectent la structure parent/enfant
 
 ## 🏫 À propos de Holberton School
-Ce projet fait partie du cursus Holberton School, une école d'ingénierie logicielle basée sur la pratique et les projets.
+Ce projet fait partie du programme de Holberton School, une école d'ingénierie logicielle basée sur des projets.
 
 ## 📄 Licence
-Projet réalisé dans le cadre du cursus Holberton School. Tous droits réservés.
+Ce projet fait partie du programme de Holberton School. Tous droits réservés.
 
-Made by Aurélie & Jordann pour Holberton School
-| `*-main.c`                       | Fichiers de test pour chaque fonction              |
-| Dossiers `0-node`, `2-right`,... | Exemples de fichiers/dossiers de tests ou outputs   |
-
-
-## Compilation
-Pour compiler tous les fichiers :
-
-```bash
-gcc -Wall -Wextra -Werror -pedantic -std=gnu89 *.c -o btree
-```
-
-Pour compiler un fichier de test spécifique :
-
-```bash
-gcc -Wall -Wextra -Werror -pedantic -std=gnu89 1-main.c 1-binary_tree_insert_left.c 0-binary_tree_node.c binary_tree_print.c -o 1-insert_left
-```
-
-
-## Utilisation
-Inclure le fichier d'en-tête dans vos fichiers sources :
-
-```c
-#include "binary_trees.h"
-```
-
-
-## Exemples
-
-Exemple de création d'un arbre et d'insertion :
-
-```c
-binary_tree_t *root;
-root = binary_tree_node(NULL, 98);
-binary_tree_insert_left(root, 12);
-binary_tree_insert_right(root, 402);
-binary_tree_print(root);
-```
-
-## 📄 License
-
-Ce projet fait partie du programme scolaire de l'école Holberton. Tous droits réservés.
-
-
----
-
----
-
+<br><br><br><br><br>
 
 ## 🇬🇧 ENGLISH VERSION
 
@@ -278,4 +230,3 @@ This project is part of the Holberton School curriculum, a project-based softwar
 
 ## 📄 License
 This project is part of the Holberton School curriculum. All rights reserved.
-
